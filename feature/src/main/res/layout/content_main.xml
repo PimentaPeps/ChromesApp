@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.com.chromesapp.mvvm.MainActivity"
+    tools:context="br.com.sticup.mvvm.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <FrameLayout
@@ -15,11 +15,11 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:adjustViewBounds="false"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/telainicial" />
+            app:srcCompat="@drawable/graficos" />
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -5,29 +5,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_overview"
             android:icon="@android:drawable/ic_menu_help"
-            android:title="Como funciona" />
+            android:title="@string/drawer_item_overview" />
         <item
-            android:id="@+id/nav_ciclo"
+            android:id="@+id/nav_repeated"
             android:icon="@android:drawable/ic_menu_rotate"
-            android:title="Ciclo e ovulação" />
+            android:title="@string/drawer_item_repeated" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@android:drawable/ic_menu_sort_by_size"
-            android:title="Graficos" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@android:drawable/ic_popup_reminder"
-            android:title="Lembretes" />
+            android:id="@+id/nav_trade"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/drawer_item_trade" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Configurações" />
-        <item
-            android:id="@+id/nav_mais"
-            android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Mais sobre esse método" />
+            android:title="@string/drawer_item_settings" />
     </group>
 
 </menu>

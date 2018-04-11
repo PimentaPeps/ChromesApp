@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "br.com.invisionapp"
+        applicationId "br.com.sticup"
         minSdkVersion 23
         targetSdkVersion 26
         versionCode 1
