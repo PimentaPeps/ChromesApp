@@ -2,19 +2,10 @@ package br.com.sticup.mvvm
 
 import android.app.Application
 import android.arch.persistence.room.Room
-import br.com.sticup.mvvm.repository.AlbumPageRepository
-import br.com.sticup.mvvm.repository.AlbumRepository
-import br.com.sticup.mvvm.repository.StickerRepository
-import br.com.sticup.mvvm.repository.UserRepository
-import br.com.sticup.mvvm.repository.api.AlbumApi
-import br.com.sticup.mvvm.repository.api.AlbumPageApi
-import br.com.sticup.mvvm.repository.api.StickerApi
-import br.com.sticup.mvvm.repository.api.UserApi
+import br.com.sticup.mvvm.repository.*
+import br.com.sticup.mvvm.repository.api.*
 import br.com.sticup.mvvm.repository.db.AppDatabase
-import br.com.sticup.mvvm.viewmodel.AlbumListViewModel
-import br.com.sticup.mvvm.viewmodel.AlbumPageListViewModel
-import br.com.sticup.mvvm.viewmodel.StickerListViewModel
-import br.com.sticup.mvvm.viewmodel.UserListViewModel
+import br.com.sticup.mvvm.viewmodel.*
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -34,17 +25,35 @@ class App : Application() {
         private lateinit var stickerListViewModel: StickerListViewModel
         fun injectStickerListViewModel() = stickerListViewModel
 
+        //UserStickerAPI
+        private lateinit var userStickerApi: UserStickerApi
+        private lateinit var userStickerRepository: UserStickerRepository
+        private lateinit var userStickerListViewModel: UserStickerListViewModel
+        fun injectUserStickerListViewModel() = userStickerListViewModel
+
         //AlbumAPI
         private lateinit var albumApi: AlbumApi
         private lateinit var albumRepository: AlbumRepository
         private lateinit var albumListViewModel: AlbumListViewModel
 //        fun injectAlbumListViewModel() = albumListViewModel
 
+        //UserAlbumAPI
+        private lateinit var userAlbumApi: UserAlbumApi
+        private lateinit var userAlbumRepository: UserAlbumRepository
+        private lateinit var userAlbumListViewModel: UserAlbumListViewModel
+        fun injectAlbumListViewModel() = userAlbumListViewModel
+
         //AlbumPageAPI
         private lateinit var albumPageApi: AlbumPageApi
         private lateinit var albumPageRepository: AlbumPageRepository
         private lateinit var albumPageListViewModel: AlbumPageListViewModel
 //        fun injectAlbumPageListViewModel() = albumPageListViewModel
+
+        //UserAlbumPageAPI
+        private lateinit var userAlbumPageApi: UserAlbumPageApi
+        private lateinit var userAlbumPageRepository: UserAlbumPageRepository
+        private lateinit var userAlbumPageListViewModel: UserAlbumPageListViewModel
+        fun injectAlbumPageListViewModel() = userAlbumPageListViewModel
 
         //UserAPI
         private lateinit var userApi: UserApi
@@ -57,7 +66,7 @@ class App : Application() {
 //        fun injectStickerDao() = appDatabase.stickerDao()
 //        fun injectAlbumApi() = albumApi
 //        fun injectAlbumDao() = appDatabase.userDao()
-//        fun injectAlbumPageApi() = albumPageApi
+//        fun injectAlbumPageApi() = userAlbumPageApi
 //        fun injectAlbumPageDao() = appDatabase.userDao()
 //        fun injectUserApi() = userApi
 //        fun injectUserDao() = appDatabase.userDao()
@@ -82,15 +91,30 @@ class App : Application() {
         stickerRepository = StickerRepository(stickerApi, appDatabase.stickerDao())
         stickerListViewModel = StickerListViewModel(stickerRepository)
 
+        //Start UserSticker Repo
+        userStickerApi = retrofit.create(UserStickerApi::class.java)
+        userStickerRepository = UserStickerRepository(userStickerApi, appDatabase.userStickerDao())
+        userStickerListViewModel = UserStickerListViewModel(userStickerRepository)
+
         //Start Album Repo
         albumApi = retrofit.create(AlbumApi::class.java)
         albumRepository = AlbumRepository(albumApi, appDatabase.albumDao())
         albumListViewModel = AlbumListViewModel(albumRepository)
 
+        //Start UserAlbum Repo
+        userAlbumApi = retrofit.create(UserAlbumApi::class.java)
+        userAlbumRepository = UserAlbumRepository(userAlbumApi, appDatabase.userAlbumDao())
+        userAlbumListViewModel = UserAlbumListViewModel(userAlbumRepository)
+
         //Start AlbumPage Repo
         albumPageApi = retrofit.create(AlbumPageApi::class.java)
         albumPageRepository = AlbumPageRepository(albumPageApi, appDatabase.albumPageDao())
         albumPageListViewModel = AlbumPageListViewModel(albumPageRepository)
+
+        //Start UserAlbumPage Repo
+        userAlbumPageApi = retrofit.create(UserAlbumPageApi::class.java)
+        userAlbumPageRepository = UserAlbumPageRepository(userAlbumPageApi, appDatabase.userAlbumPageDao())
+        userAlbumPageListViewModel = UserAlbumPageListViewModel(userAlbumPageRepository)
 
         //Start User Repo
         userApi = retrofit.create(UserApi::class.java)

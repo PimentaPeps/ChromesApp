@@ -1,6 +1,7 @@
 package br.com.sticup.mvvm.repository.data.converter
 
 import android.arch.persistence.room.TypeConverter
+import br.com.sticup.mvvm.repository.data.Album
 import br.com.sticup.mvvm.repository.data.AlbumPage
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -11,12 +12,12 @@ import com.google.gson.reflect.TypeToken
 class AlbumPageConverter {
 
     @TypeConverter
-    fun fromString(value: String?): ArrayList<AlbumPage>? {
-        return if (value == null) null else Gson().fromJson(value, object : TypeToken<ArrayList<AlbumPage>>() {}.type)
+    fun fromString(value: String?): ArrayList<Album>? {
+        return if (value == null) null else Gson().fromJson(value, object : TypeToken<ArrayList<Album>>() {}.type)
     }
 
     @TypeConverter
-    fun albumPageToString(albumPage: ArrayList<AlbumPage>?): String? {
-        return Gson().toJson(albumPage)
+    fun fromArrayList(album: ArrayList<Album>?): String? {
+        return Gson().toJson(album)
     }
 }

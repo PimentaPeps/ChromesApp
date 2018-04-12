@@ -25,7 +25,7 @@ class UserRepository(val userApi: UserApi, val userDao: UserDao) {
     }
 
     fun getUsersFromApi(): Observable<List<User>> {
-        return userApi.getUsers()
+        return userApi.getUser()
                 .doOnNext {
                     Timber.d("Dispatching ${it.size} stickers from API...")
                     storeUsersInDb(it)

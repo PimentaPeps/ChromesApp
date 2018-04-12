@@ -62,6 +62,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_overview -> {
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.frag_container, StickerListFragment()).commit()
                 // Handle the camera action
             }
             R.id.nav_repeated -> {

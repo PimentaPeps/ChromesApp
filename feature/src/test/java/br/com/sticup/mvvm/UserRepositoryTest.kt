@@ -30,7 +30,7 @@ class UserRepositoryTest {
 
     @Test
     fun test_emptyCache_noDataOnApi_returnsEmptyList() {
-        `when`(userApi.getUsers()).thenReturn(Observable.just(emptyList<User>()))
+        `when`(userApi.getUser()).thenReturn(Observable.just(emptyList<User>()))
 
         userRepository.getUsers().test()
                 .assertValue { it.isEmpty() }
@@ -38,7 +38,7 @@ class UserRepositoryTest {
 
     @Test
     fun test_emptyCache_hasDataOnApi_returnsApiData() {
-        `when`(userApi.getUsers()).thenReturn(Observable.just(listOf(aRandomUser())))
+        `when`(userApi.getUser()).thenReturn(Observable.just(listOf(aRandomUser())))
 
         userRepository.getUsers().test()
                 .assertValueCount(1)
@@ -49,7 +49,7 @@ class UserRepositoryTest {
     fun test_hasCacheData_hasApiData_returnsBothData() {
         val cachedData = listOf(aRandomUser())
         val apiData = listOf(aRandomUser(), aRandomUser())
-        `when`(userApi.getUsers()).thenReturn(Observable.just(apiData))
+        `when`(userApi.getUser()).thenReturn(Observable.just(apiData))
         userRepository.cachedUsers = cachedData
 
         userRepository.getUsers().test()
@@ -64,7 +64,7 @@ class UserRepositoryTest {
     @Test
     fun test_cache_updatedWithApiData() {
         val apiData = listOf(aRandomUser(), aRandomUser())
-        `when`(userApi.getUsers()).thenReturn(Observable.just(apiData))
+        `when`(userApi.getUser()).thenReturn(Observable.just(apiData))
 
         userRepository.getUsers().test()
 

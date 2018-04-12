@@ -1,11 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:id="@+id/linearlayout_stickers_fragment_fragmentcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/stickersList"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/screen_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker1"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker2"
+                        android:layout_width="80sp"
+                        android:layout_height="60sp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker3"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker4"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker5"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker6"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker7"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker8"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker9"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker10"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/screen_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker11"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker12"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker13"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker14"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker15"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker16"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker17"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker18"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker19"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/framelayout_stickers_fragment_sticker20"
+                        android:layout_width="60sp"
+                        android:layout_height="80sp"
+                        android:layout_margin="10sp">
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
